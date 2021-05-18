@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Login Page</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="font-size: smaller;">
+    <div class="seperate">
+    <div class="login_tab">
+    <form class="form" >
+        <div class="head">
+            <button class="login headc " id="login">Login</button>
+            <button class="signin1 signin headc" id="signin"><a href="signup.html" >SignUp</a></button>
+        </div>
+        <div class="login_tabs">
+            <div class="username tab">
+                Username:<br>
+                <input type="text" id="text" name="text" required>
+            </div>
+            <div>
+                Password:<br>
+                <input id="Password" type="password" onkeyup="validatePass()" class="inputs" >
+                <label id="passPrompt" class="labels"></label>
+            </div>
+        </div>
+        <button type="submit" class="button blin" id="blin" onclick="validate1()">Login</button><br>
+        
+    </form>
+    <script src="indexf.js"></script>
+</body>
+</html>

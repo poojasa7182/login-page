@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Login Page</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="font-size: smaller;">
+    <div class="seperate">
+    <div class="login_tab">
+    <form class="form" >
+        <div class="head">
+            <button class="login headc " id="login">Login</button>
+            <button class="signin1 signin headc" id="signin"><a href="signup.html" >SignUp</a></button>
+        </div>
+        <div class="login_tabs">
+            <div class="hide">
+                Username:<br>
+                <input id="use" class="inputs" onkeyup="validateUse()" type="text" name="use" >
+                <label id="usePrompt" class="labels"></label>
+            </div>
+            <div>
+                Password:<br>
+                <input id="Password" type="password" onkeyup="validatePass1()" class="inputs" name="pass">
+                <label id="passPrompt" class="labels"></label>
+            </div>
+        </div>
+        <button type="submit" class="button blin" id="blin" onclick="validate1()">Login</button><br>
+        
+    </form>
+    <script >
+       
+        function validate1(){
+            function producePrompt(message ,promptLocation,color){
+                document.getElementById(promptLocation).innerHTML = message;
+                document.getElementById(promptLocation).style.color = color;
+            }
+            function nowOk(promptLocation){
+                document.getElementById(promptLocation).innerHTML = "";
+            }
+
+            function validateUse(){
+    
+                var edu = document.getElementById("use").value;
+                if(edu.length==0){
+                
+                    producePrompt("Useranme is required!!" , "usePrompt" , "red");
+                    return false;
+                }
+                else{
+                
+                    nowOk("usePrompt");
+                    return true;      
+                }
+            }
+            function validatePass1(){
+                var edu = document.getElementById("Password").value;
+                if(edu.length==0){
+                    producePrompt("Password is required!!" , "passPrompt" , "red");
+                    return false;
+                }
+                else{
+                    nowOk("passPrompt");
+                    return true;      
+                }
+            }
+
+            if(validatePass1()&&validateUse()){
+
+            }
+            else{
+                alert("All fields not filled");
+            }
+        }
+    </script>
+</body>
+</html>

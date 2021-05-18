@@ -1,0 +1,111 @@
+.seperate{
+    display: flex;
+    height: 100%;
+    width:100%; 
+    background-color: rgb(46, 48, 46); 
+}
+a ,a:link, a:visited  ,a:hover, a:active{
+    text-decoration: none;
+    text-decoration-color: rgb(235, 191, 187);
+    color: rgb(235, 191, 187);
+}
+a:visited{
+    color: rgb(235, 191, 187);
+}
+.login_tab{
+    background-color: rgb(46, 48, 46);
+    display: flex;
+    margin: 1.5%;   
+    width: 50%;  
+    border: 10px solid salmon;
+    border-radius: 20px;
+    outline: 39px solid rgb(46, 48, 46);
+}
+.image{
+    width: 65%;
+    background-color:salmon;
+    border: 10px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form{
+    height:50%;
+    width:70%;
+    margin-top: 10%;
+    margin-left:15%;    
+}
+.head{
+    display: flex;  
+}
+/* .hide{
+    color: blue;
+} */
+.hide1{
+    display: none;
+}
+.headc{
+    width:50%;
+    font-size:80px; 
+    margin:0%;
+    text-align: center;
+    border: 2px;
+    color:rgb(252, 116, 101);  
+    background-color: rgb(46, 48, 46);
+    outline: none;  
+}
+.signin1,.login1{
+    color: rgb(235, 191, 187);
+}
+.signin:hover, .login:hover{
+    color: rgb(245, 151, 140);
+    background-color: rgb(33, 34, 33);
+    border-radius: 50px;
+}
+
+.login_tabs{
+    display: flex;
+    flex-direction: column;
+    /* font-size: 60px; */
+    color: salmon;
+}
+.tab{
+    margin:0%;
+}
+.confirm_password1,.password1{
+    display: none;
+}
+input{
+    width: 70%;
+    height:30px;
+    /* font-size: 60%; */
+    color:rgb(245, 211, 207);
+    border: 3px solid salmon;
+    border-radius: 8px;
+    background-color: slategrey;
+    outline:none;
+}
+input:hover{
+    border:3.5px solid rgb(245, 76, 58) ;
+    color: rgb(250, 170, 161);
+}
+.button{
+    width:40%;
+    margin-left:30%;
+    margin-top: 2%;
+    height:12.5%;
+    color:salmon;
+    /* font-size: 250%; */
+    font-weight: 200;
+    align-content: center;
+    background-color:rgb(46, 48, 46);
+    text-align: center;
+    border: 5px solid salmon;
+    border-radius: 10px;
+}
+.bsin1,.blin1{
+    display:none;
+}
+.button:hover{
+    border: 3px solid salmon;
+    /* font-size: 275%; */
+}
