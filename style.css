@@ -12,6 +12,11 @@ a ,a:link, a:visited  ,a:hover, a:active{
 a:visited{
     color: rgb(235, 191, 187);
 }
+.page2{
+    margin-top: 3%;
+    margin-left: 3%;
+    color: salmon;
+}
 .login_tab{
     background-color: rgb(46, 48, 46);
     display: flex;

@@ -1,17 +1,21 @@
+<?php
+
+
+
+?>
 <html>
 <head>
-<title>Login Page</title>
+<title>Online Users</title>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="info.css">
 </head>
-<body style="font-size: smaller;">
+<body style="font-size: smaller; display:flex;">
     <div class="seperate">
     <div class="login_tab">
-    <form class="form" action="signup.php" method="POST">
-        <div class="head">
-            <button class="login1 login headc " id="login"><a href="login1.html" >Login</a></button>
-            <button type="button"  class="signin headc" id="signin">SignUp</button>
+        <div class="page2">
+            <button class="profileUpdate"><a href="profile.php" >Update Profile</a></button>
+            <button class="profileUpdate"><a href="page2.html" >Users</a></button>
         </div>
+        
         <div class="login_tabs">
             <div class="hide">
                 Name:<br>
@@ -22,7 +26,6 @@
                 Username:<br>
                 <input id="use" class="inputs" onkeyup="validateUse()" type="text" name="use" >
                 <label id="usePrompt" class="labels"></label>
-                <label id="unameCheck" class="labels"></label>
             </div>
             <div class="hide">
                 E-mail:<br>
@@ -36,7 +39,7 @@
             </div>
             <div class="hide">
                 Confirm-password:<br>
-                <input id="Confirm-password"type="password" onkeyup="validateCoPass()" class="inputs">
+                <input id="Confirm-password"type="text" onkeyup="validateCoPass()" class="inputs">
                 <label id="coPassPrompt"></label>
             </div>
             <div class="hide"> 
@@ -53,19 +56,8 @@
                 <input id="phnNo" type="text" onkeyup="validatePhnNo()" class="inputs" name="phoneNo">
                 <label id="phnNoPrompt"></label>
             </div>
-            <div>
-                <!-- <button type="submit" >Submit</button> -->
-               <br>
-                <button type="submit" class="button bsin" id="actual" style="display: none;"></button><br>
-                <button type="button" class="button bsin" id="bsin" onclick="validate()">SignUp</button>
-            </div>
-            
-        </div>
-        
-        
-    </form>
-    
-    <script src="info1.js"></script>
-    
+</div>
+    </div>
+    </div>
 </body>
 </html>

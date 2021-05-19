@@ -8,7 +8,7 @@ function nowOk(promptLocation){
 
 
 function validateUse(){
-    
+    checkData();
     var edu = document.getElementById("use").value;
     if(edu.length==0){
        
@@ -153,21 +153,59 @@ function validateGen(){
     }
 }
 
-
-
-function validate1(){
-    alert("All fields not filled");
-    if(validatePass()){
-
+function checkData(){
+    console.log("hi");
+    var uname = document.getElementById("use").value;
+    data = {
+        username : uname
+    };
+    var user = uname;
+    if(uname!=""){
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange= function(){
+            if(this.readyState==4 && this.status==200){
+                console.log(this.responseText);
+                if(this.responseText=="0"){
+                    document.getElementById("unameCheck").innerHTML="Username already exists!!";
+                    document.getElementById("unameCheck").style.color="red";
+                    return false;
+                }
+                if(this.responseText=="1"){
+                    document.getElementById("unameCheck").innerHTML="OK";
+                    document.getElementById("unameCheck").style.color="green";
+                    return true;
+                }
+            }
+        }
+        
+        xhr.open("GET", "checkuser.php?use="+user,true);
+        xhr.send();
+        xhr.onerror = function(){
+            alert("error in xhr request");
+        }
+        if(document.getElementById("unameCheck").innerHTML=="OK"){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     else{
-        alert("All fields not filled");
+        document.getElementById("unameCheck").innerHTML="";
     }
 }
+
+
 //validate all
 function validate(){
-    if(validateUse()&&validateGen()&&validatePhnNo()&&validateAge()&&validateCoPass()&&validatePass()&&validateEmail()&&validateName()){
-
+    if(validateUse()&&validateGen()&&validatePhnNo()&&validateCoPass()&&validatePass()&&validateEmail()&&validateName()){
+        console.log("haaaaaaaaaa")
+        if(checkData()){
+            document.getElementById("actual").click();
+        }
+        else{
+            alert("Please, SingUp using a different username.")
+        }
     }
     else{
         alert("All fields not filled");

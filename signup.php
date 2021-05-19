@@ -7,10 +7,12 @@
     $phone = $_POST['phoneNo'];
 
     include "conection.php";
-
+    
     //print_r("INSERT INTO info(`name`,username,email,pass,gender,phone) VALUES(\"" . $name . "\",\"" . $username . "\",\"" . $email . "\",\"" . $pass . "\",\"" . $gender . "\",\"" . $phone . "\")");
     $mysqli->query("INSERT INTO info(`name`,username,email,pass,gender,phone) VALUES(\"" . $name . "\",\"" . $username . "\",\"" . $email . "\",\"" . $pass . "\",\"" . $gender . "\",\"" . $phone . "\")");
-
+   
+    header('location:login1.html');
+   
     // $err_username = $err_pass = $err_full = "";
     // $validated = false;
         
