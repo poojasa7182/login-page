@@ -1,6 +1,16 @@
 <?php
+    include "conection.php";
 
-
+    $username = $_COOKIE["username"];
+    $name = $mysqli->query("SELECT `name` FROM info WHERE username=\"" . $username .  "\";");
+    $uname = $mysqli->query("SELECT username FROM info WHERE username=\"" . $username .  "\";");
+    $email = $mysqli->query("SELECT email FROM info WHERE username=\"" . $username .  "\";");
+    $gender = $mysqli->query("SELECT gender FROM info WHERE username=\"" . $username .  "\";");
+    $phone = $mysqli->query("SELECT phone FROM info WHERE username=\"" . $username .  "\";");
+    $dob = $mysqli->query("SELECT dob FROM info WHERE username=\"" . $username .  "\";");
+    $about = $mysqli->query("SELECT about FROM info WHERE username=\"" . $username .  "\";");
+    //print_r($result);
+    
 
 ?>
 <html>
@@ -8,54 +18,102 @@
 <title>Online Users</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-size: smaller; display:flex;">
+<body style="font-size: 20px; display:flex;">
     <div class="seperate">
-    <div class="login_tab">
+    <div style="display:flex; flex-direction:column;"class="login_tab" >
         <div class="page2">
-            <button class="profileUpdate"><a href="profile.php" >Update Profile</a></button>
-            <button class="profileUpdate"><a href="page2.html" >Users</a></button>
+            <button  type="button" class="profileUpdate"><a href="profile.php" >Your Profile</a></button>
+            <button  type="button"  class="profileUpdate"><a href="page2.html" >Users</a></button>
+            <button type="button" class="profileUpdate"><a href="updateProfile.php">Update Profile</a></button>
+            <button type="button" class="profileUpdate"><a href="logout.php">Logout</a></button>
         </div>
+        <br>
+        <div class="login_tabs" style="margin-left:2%;">
+            <div class="hide">
+                Name:
+                <span class="profilepage" >
+                <?php 
+                    while($row = $name->fetch_assoc()){
+                        printf(
+                            $row['name'],
+                        );
         
-        <div class="login_tabs">
-            <div class="hide">
-                Name:<br>
-                <input id="name" class="inputs" onkeyup="validateName()" type="text" name="name" >
-                <label id="namePrompt" class="labels"></label>
+                    } ?>
+                </span>
             </div>
             <div class="hide">
-                Username:<br>
-                <input id="use" class="inputs" onkeyup="validateUse()" type="text" name="use" >
-                <label id="usePrompt" class="labels"></label>
+                Username:
+                <span class="profilepage" >
+                <?php 
+                    while($row = $uname->fetch_assoc()){
+                        printf(
+                            $row['username'],
+                        );
+        
+                    } ?>
+                </span>
             </div>
             <div class="hide">
-                E-mail:<br>
-                <input id="Email" class="inputs" onkeyup="validateEmail()" type="text" name="email">
-                <label id="emailPrompt" class="labels"></label>
-            </div>
-            <div>
-                Password:<br>
-                <input id="Password" type="password" onkeyup="validatePass()" class="inputs" name="pass" >
-                <label id="passPrompt" class="labels"></label>
-            </div>
-            <div class="hide">
-                Confirm-password:<br>
-                <input id="Confirm-password"type="text" onkeyup="validateCoPass()" class="inputs">
-                <label id="coPassPrompt"></label>
-            </div>
-            <div class="hide"> 
-                <label for="Gender">Gender:</label><br>
-                <input list="browsers" id="gen" name="gender" onkeyup="validateGen()"><label id="genPrompt"></label>
-                <datalist id="browsers">
-                    <option value="Male">
-                    <option value="Female">
-                    <option value="Other">
-                </datalist>
+                E-mail:
+                <span class="profilepage" >
+                <?php 
+                    while($row = $email->fetch_assoc()){
+                        printf(
+                            $row['email'],
+                        );
+        
+                    } ?>
+                </span>
             </div>
             <div class="hide">
-                Phone No.:<br>
-                <input id="phnNo" type="text" onkeyup="validatePhnNo()" class="inputs" name="phoneNo">
-                <label id="phnNoPrompt"></label>
+                Gender:
+                <span class="profilepage" >
+                <?php 
+                    while($row = $gender->fetch_assoc()){
+                        printf(
+                            $row['gender'],
+                        );
+        
+                    } ?>
+                </span>
             </div>
+            <div class="hide">
+                Date of birth:
+                <span class="profilepage" >
+                <?php 
+                    while($row = $dob->fetch_assoc()){
+                        printf(
+                            $row['dob'],
+                        );
+        
+                    } ?>
+                </span>
+            </div>
+            <div class="hide">
+                Phone No.:
+                <span class="profilepage" >
+                <?php 
+                    while($row = $phone->fetch_assoc()){
+                        printf(
+                            $row['phone'],
+                        );
+        
+                    } ?>
+                </span>
+            </div>
+            <div class="hide">
+                About:
+                <span class="profilepage" >
+                <?php 
+                    while($row = $about->fetch_assoc()){
+                        printf(
+                            $row['about'],
+                        );
+        
+                    } ?>
+                </span>
+            </div>
+            
 </div>
     </div>
     </div>

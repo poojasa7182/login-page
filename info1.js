@@ -153,6 +153,31 @@ function validateGen(){
     }
 }
 
+function validateAbt(){
+    var edu = document.getElementById("abt").value;
+    if(edu.length==0){
+        producePrompt("About is required!!" , "abtPrompt" , "red");
+        return false;
+    }
+    else{
+        nowOk("abtPrompt");
+        return true;      
+    }
+}
+
+function validatedob(){
+    var edu = document.getElementById("dob").value;
+    if(edu.length==0){
+        producePrompt("Date of Birth is required!!" , "dobPrompt" , "red");
+        return false;
+    }
+    else{
+        nowOk("dobPrompt");
+        return true;      
+    }
+}
+
+
 function checkData(){
     console.log("hi");
     var uname = document.getElementById("use").value;
@@ -205,6 +230,20 @@ function validate(){
         }
         else{
             alert("Please, SingUp using a different username.")
+        }
+    }
+    else{
+        alert("All fields not filled");
+    }
+}
+function validate2(){
+    if(validatedob()&&validateAbt()&&validateUse()&&validateGen()&&validatePhnNo()&&validateCoPass()&&validatePass()&&validateEmail()&&validateName()){
+        console.log("haaaaaaaaaa")
+        if(checkData()){
+            document.getElementById("actual").click();
+        }
+        else{
+            alert("Please, use a different username.")
         }
     }
     else{

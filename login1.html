@@ -6,7 +6,7 @@
 <body style="font-size: smaller;">
     <div class="seperate">
     <div class="login_tab">
-    <form class="form" action="profile.php" method="POST">
+    <form class="form" action="login.php" method="POST">
         <div class="head">
             <button type="button"  class="login headc " id="login">Login</button>
             <button class="signin1 signin headc" id="signin"><a href="signup.html" >SignUp</a></button>
@@ -14,13 +14,18 @@
         <div class="login_tabs">
             <div class="hide">
                 Username:<br>
-                <input id="use" class="inputs" oninput="validateUse()" type="text" name="use" >
+                <input id="use" class="inputs" onkeyup="validateUse()" type="text" name="use" >
                 <label id="usePrompt" class="labels"></label>
             </div>
             <div>
                 Password:<br>
-                <input id="Password" type="password" oninput="validatePass1()" class="inputs" name="pass">
+                <input id="Password" type="password" onkeyup="validatePass1()" class="inputs" name="pass">
                 <label id="passPrompt" class="labels"></label>
+            </div>
+            <div >
+                <input id="remember me" type="checkbox"  class="inputs" style="height: 15px; width: 15px;" name="remme">
+                Remember me<br>
+              
             </div>
             <label id="checkUser" class="labels"></label>
         </div>

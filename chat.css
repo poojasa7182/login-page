@@ -1,0 +1,197 @@
+body{
+    background-color: rgb(46, 45, 45);
+}
+.chat-box{
+    margin: 4.5%;
+    width: 90%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(73, 72, 72);
+    border: 10px solid salmon;
+    border-radius: 10px;
+}
+.chat-head{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 10px solid salmon;
+    height: 10%;
+}
+.profile-photo{   
+    margin: 0.1% 2%;
+    float: left;
+    border: 5px solid salmon;
+    background-image: url("photos/2.jpg");
+    border-radius: 50%;
+    padding:30px;
+    width: 30px;
+}
+.chat-name{
+    align-self: center;
+    text-align: center;
+    align-items: center;
+    border: 5px solid salmon;
+    border-radius: 20px;
+    height: 70%;
+    width:90%;
+    background-color: rgb(46,45,45);
+    color:mistyrose;
+    font-size: 50px;
+}
+.user-list{
+    align-self: center;
+    margin-left: 0.5%; 
+    margin-top: 1.2%;   
+    width: 6%;
+    height: 100%;
+    
+}
+.list{
+    width:90%;
+    height: 73%;
+    background-image: url("photos/2.jpg");
+    font-size: 40px;
+    color:rgb(26, 78, 77);
+    border-radius: 10px;
+    border: 5px solid salmon;
+}
+.chat-display{
+    display: flex;
+    width:100%;
+    height:80%
+}
+.list-user{
+    width: 20%;
+    background-color: rgb(63, 65, 66);
+    border-left: 10px solid salmon;
+}
+.info{
+    margin:5%;
+    font-size: 40px;
+    border-bottom: 5px solid rgb(236, 186, 186);
+    color: rgb(221, 211, 191);
+    background-image: linear-gradient(rgb(196, 188, 188), rgb(80, 80, 74));
+}
+.user{
+    margin: 5%;
+    font-size: 35px;
+    border-bottom: 2px solid rgb(236, 212, 238);
+    color: rgb(252, 252, 252);
+    background-image: linear-gradient(rgb(196, 188, 188), rgb(228, 116, 104));
+}
+.chat-body{
+    width:80%;
+    background-image: url("chatbox1.jpg");
+    margin: 0%;
+    height:100%;  
+    overflow-y: auto;
+}
+.message{
+    width:55%;
+    padding: 10px;
+    margin:17px 2px;
+    border:2px solid black;
+    border-radius: 20px;
+    height: 5%;
+    font-size: 200%;
+    color: rgb(252, 251, 248);
+}
+.left{
+    background-color: rgb(36, 35, 35, 0.767);
+    float: left;
+    clear: both;
+}
+.right{
+    background-color: rgb(218, 111, 99,0.767);
+    float: right;
+    clear: both;
+}
+
+.list-user-cl{
+    display: none;
+}
+.chat-body1{
+    width:100%;
+}
+#send-container{   
+    height: 10%;
+    width: 100%;
+    border-top: 10px solid salmon;
+    align-items: center;
+}
+#messageInp{
+    width: 90%;
+    height:72px;
+    margin: 0.5%;
+    font-size: 30px;
+    background-color: rgb(82, 80, 80);
+    border-radius: 50px;
+    outline: none;
+    color: snow;
+}
+.btn{
+    cursor: pointer;
+    background-color:rgb(73, 72, 72);    
+    height: 72px;
+    width: 7%;
+    margin-bottom: 0%;
+    color:seashell;
+    font-size: 35px;
+    border: 5px solid salmon;
+    border-radius: 20px;
+}
+
+
+
+
+
+/*.logo{
+    display: block;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+}
+
+.container{
+    width:90%;
+    background-color: burlywood;
+    margin: auto;
+    height:80vh;
+    padding: 30px;
+    overflow-y: auto;
+}
+.message{
+    background-color: grey;
+    width:24%;
+    padding: 10px;
+    margin:17px 2px;
+    border:2px solid black;
+    border-radius: 20px;
+}
+.left{
+    float: left;
+    clear: both;
+}
+.right{
+    float: right;
+    clear: both;
+}
+#send-container{
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+#messageInp{
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 10px;
+    height:34px;
+}
+.btn{
+    cursor: pointer;
+    border:2px solid black;
+    border-radius: 30px;
+    height: 34px;
+}*/

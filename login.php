@@ -1,14 +1,29 @@
 <?php
     include "conection.php";
 
-    $username = $_POST['use'];
-    $pass = $_POST['pass'];
 
-    $result = $mysqli->query("SELECT * FROM info WHERE usrename=\"" . $username . "\" AND pass=\"" . $pass . "\";");
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+        $username = $_POST['use'];
+        $pass = $_POST['pass'];
+        $rem = $_POST['remme'];
 
-    if($result->num_rows==0){
-        return true;
-    }else{
-        return false;
+        $result = $mysqli->query("SELECT * FROM info WHERE usrename=\"" . $username . "\" AND pass=\"" . $pass . "\";");
+        $res1 = $mysqli->query("UPDATE info SET logInfo = \"1\" WHERE username=\"" . $username . "\";");
+        
+        //if($result->num_rows >0){
+            $cookie_1 = "username";
+            setcookie( $cookie_1 ,$username);
+        if(!empty($rem)){
+            setcookie("remember","1");
+        }
+        else{
+            setcookie("remember","0");
+        }
+        header("location:profile.php");
     }
+    else{
+        header("location:login1.html");
+    }
+        
+    
 ?>
