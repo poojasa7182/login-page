@@ -4,11 +4,24 @@
 <link rel="stylesheet" href="style.css">
 <style>
     .content1{
-        margin:1%;
+        margin:0%;
+        min-width: 90%;
         background-color: rgb(58, 57, 57);  
     }
     .searchResults{
         margin-top: 5%;
+    }
+    .icon{
+        max-width:30px;
+        max-height:30px;
+    }
+     .content{
+        display: flex;
+        flex-direction: row-reverse;
+        /* align-content: space-around; */
+    }
+    .content2{
+      justify-self: flex-end;
     }
 </style>
 </head>
@@ -26,7 +39,7 @@
                 You can search for your friends here:<br>
                 <input type="text" id="searchbox" name="search" onkeyup="find()">
                 <button class="profileUpdate" id="search" onclick="find()">Search</button>
-                Search reasults:
+                <br>Search reasults:
                 <div class="searchResults" id="id2" style="background-color: rgb(32, 32, 32);">
                 
                 </div>

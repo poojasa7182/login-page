@@ -1,7 +1,7 @@
 <?php
     include "conection.php";
 
-    $result = $mysqli->query("SELECT username,`name` FROM info WHERE logInfo=\"1\"");
+    $result = $mysqli->query("SELECT username,`name`,`image` FROM pooja_info WHERE logInfo=\"1\"");
     //print_r($result);
     $count = $result->num_rows;
     
@@ -11,9 +11,10 @@
         
         
             while($row = $result->fetch_assoc()){
-                printf("{\"Username\":\" %s \",\"Name\":\" %s \"},",
+                printf("{\"Username\":\" %s \",\"Name\":\" %s \",\"image\":\" %s \"},",
                 $row["username"],
                 $row["name"],
+                $row["image"],
             );
             }
             $count--;
@@ -24,6 +25,6 @@
     }else{
         printf('No record found,<br />');
     }
-    echo("{\"Username\": \"\",\"Name\": \"\"}]}");
+    echo("{\"Username\": \"\",\"Name\": \"\",\"image\":\"\"}]}");
 
 ?>

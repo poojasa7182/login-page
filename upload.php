@@ -7,6 +7,11 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
+
+$username = $_COOKIE['username'];
+if($target_file!=""){
+  $mysqli->query("UPDATE pooja_info SET `image`=\"" . $target_file . "\" WHERE username=\"" . $username . "\"");
+}
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
   $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
@@ -49,5 +54,5 @@ if ($uploadOk == 0) {
     echo "Sorry, there was an error uploading your file.";
   }
 }
-header('location:updateProfile.html');
+header('location:updateProfile.php');
 ?>

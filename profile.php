@@ -2,13 +2,13 @@
     include "conection.php";
 
     $username = $_COOKIE["username"];
-    $name = $mysqli->query("SELECT `name` FROM info WHERE username=\"" . $username .  "\";");
-    $uname = $mysqli->query("SELECT username FROM info WHERE username=\"" . $username .  "\";");
-    $email = $mysqli->query("SELECT email FROM info WHERE username=\"" . $username .  "\";");
-    $gender = $mysqli->query("SELECT gender FROM info WHERE username=\"" . $username .  "\";");
-    $phone = $mysqli->query("SELECT phone FROM info WHERE username=\"" . $username .  "\";");
-    $dob = $mysqli->query("SELECT dob FROM info WHERE username=\"" . $username .  "\";");
-    $about = $mysqli->query("SELECT about FROM info WHERE username=\"" . $username .  "\";");
+    $name = $mysqli->query("SELECT `name` FROM pooja_info WHERE username=\"" . $username .  "\";");
+    $uname = $mysqli->query("SELECT username FROM pooja_info WHERE username=\"" . $username .  "\";");
+    $email = $mysqli->query("SELECT email FROM pooja_info WHERE username=\"" . $username .  "\";");
+    $gender = $mysqli->query("SELECT gender FROM pooja_info WHERE username=\"" . $username .  "\";");
+    $phone = $mysqli->query("SELECT phone FROM pooja_info WHERE username=\"" . $username .  "\";");
+    $dob = $mysqli->query("SELECT dob FROM pooja_info WHERE username=\"" . $username .  "\";");
+    $about = $mysqli->query("SELECT about FROM pooja_info WHERE username=\"" . $username .  "\";");
     //print_r($result);
     
 

@@ -9,7 +9,7 @@
     include "conection.php";
     
     //print_r("INSERT INTO info(`name`,username,email,pass,gender,phone) VALUES(\"" . $name . "\",\"" . $username . "\",\"" . $email . "\",\"" . $pass . "\",\"" . $gender . "\",\"" . $phone . "\")");
-    $mysqli->query("INSERT INTO info(`name`,username,email,pass,gender,phone) VALUES(\"" . $name . "\",\"" . $username . "\",\"" . $email . "\",\"" . $pass . "\",\"" . $gender . "\",\"" . $phone . "\")");
+    $mysqli->query("INSERT INTO pooja_info(`name`,username,email,pass,gender,phone) VALUES(\"" . $name . "\",\"" . $username . "\",\"" . $email . "\",\"" . $pass . "\",\"" . $gender . "\",\"" . $phone . "\")");
    
     header('location:login1.html');
    

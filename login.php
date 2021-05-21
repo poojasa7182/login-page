@@ -7,8 +7,8 @@
         $pass = $_POST['pass'];
         $rem = $_POST['remme'];
 
-        $result = $mysqli->query("SELECT * FROM info WHERE usrename=\"" . $username . "\" AND pass=\"" . $pass . "\";");
-        $res1 = $mysqli->query("UPDATE info SET logInfo = \"1\" WHERE username=\"" . $username . "\";");
+        $result = $mysqli->query("SELECT * FROM pooja_info WHERE usrename=\"" . $username . "\" AND pass=\"" . $pass . "\";");
+        $res1 = $mysqli->query("UPDATE pooja_info SET logInfo = \"1\" WHERE username=\"" . $username . "\";");
         
         //if($result->num_rows >0){
             $cookie_1 = "username";

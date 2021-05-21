@@ -5,7 +5,7 @@
     $username = $_COOKIE['username'];
 
     //echo("SELECT * FROM info WHERE username=\"" . $username . "\" AND pass=\"" . $password . "\";");
-    $result = $mysqli->query("SELECT * FROM info WHERE username=\"" . $username .  "\";");
+    $result = $mysqli->query("SELECT * FROM pooja_info WHERE username=\"" . $username .  "\";");
 
     if($result->num_rows>0){
          while($row = $result->fetch_assoc()){
@@ -26,12 +26,17 @@
 <html>
 <head>
 <title>Online Users</title>
+<style>
+    input{
+        width:70%;
+    }
+</style>
 <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-size: smaller;">
+<body style="font-size: medium;">
     <div class="seperate">
     <div class="login_tab">
-        <div class="page2">
+        <div class="page2" style="width:90%">
             <button class="profileUpdate"><a href="profile.php" >Profile</a></button>
             <button class="profileUpdate"><a href="page2.html" >Users</a></button>
             <button type="button" class="profileUpdate"><a href="logout.php">Logout</a></button>
@@ -101,21 +106,7 @@
                         ?>">
                         <label id="abtPrompt"></label>
                     </div>
-                    <div class="hide">
-                        Add a profile picture:<br>
-                        <form action="upload.php" method="post" enctype="multipart/form-data">
-                            Select image to upload:
-                            <input type="file" name="fileToUpload" id="fileToUpload" name="image">
-                            <input type="submit" value="Upload Image" name="submit">
-                          </form>
-                          <!-- <div style="width:30px ; height:30px " >
-                            <img name="image" href="<?php
-                                echo ($image);
-                                ?>">
-                          </div>
-                           -->
-                        
-                    </div>
+                    
                     <div>
                         <!-- <button type="submit" >Submit</button> -->
                        <br>
@@ -127,6 +118,25 @@
                 
                 
             </form>
+        </div>
+    </div>
+    <div class="login_tab">
+        <div class="login_tabs">
+            <div class="hide">
+                Add a profile picture:<br><br>
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    Select image to upload:<br>
+                    <input type="file" name="fileToUpload" id="fileToUpload" name="image"><br><br>
+                    <input type="submit" value="Upload Image" name="submit">
+                    </form>
+                    <div  >
+                    <img name="image" style="border:2px solid black width:200px ; height:200px" src="<?php
+                        echo ($image);
+                        ?>">
+                    </div>
+                   
+                
+            </div>
         </div>
     </div>
     </div>
