@@ -34,8 +34,8 @@
                 <span class="profilepage" >
                 <?php 
                     while($row = $name->fetch_assoc()){
-                        printf(
-                            $row['name'],
+                        print(
+                            $row['name']
                         );
         
                     } ?>
@@ -46,8 +46,8 @@
                 <span class="profilepage" >
                 <?php 
                     while($row = $uname->fetch_assoc()){
-                        printf(
-                            $row['username'],
+                        print(
+                            $row['username']
                         );
         
                     } ?>
@@ -58,8 +58,8 @@
                 <span class="profilepage" >
                 <?php 
                     while($row = $email->fetch_assoc()){
-                        printf(
-                            $row['email'],
+                        print(
+                            $row['email']
                         );
         
                     } ?>
@@ -70,8 +70,8 @@
                 <span class="profilepage" >
                 <?php 
                     while($row = $gender->fetch_assoc()){
-                        printf(
-                            $row['gender'],
+                        print(
+                            $row['gender']
                         );
         
                     } ?>
@@ -82,8 +82,8 @@
                 <span class="profilepage" >
                 <?php 
                     while($row = $dob->fetch_assoc()){
-                        printf(
-                            $row['dob'],
+                        print(
+                            $row['dob']
                         );
         
                     } ?>
@@ -94,8 +94,8 @@
                 <span class="profilepage" >
                 <?php 
                     while($row = $phone->fetch_assoc()){
-                        printf(
-                            $row['phone'],
+                        print(
+                            $row['phone']
                         );
         
                     } ?>
@@ -106,8 +106,8 @@
                 <span class="profilepage" >
                 <?php 
                     while($row = $about->fetch_assoc()){
-                        printf(
-                            $row['about'],
+                        print(
+                            $row['about']
                         );
         
                     } ?>

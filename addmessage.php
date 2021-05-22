@@ -1,18 +1,16 @@
 <?php
-    $name = $_POST['name'];
-    $username = $_POST['use'];
-    $email = $_POST['email'];
-    $pass = $_POST['pass'];
-    $gender = $_POST['gender'];
-    $phone = $_POST['phoneNo'];
+    
+    $sender = $_COOKIE["username"];
+    $receiver = $_COOKIE["seconduser"];
+    $message = $_REQUEST["message"];
 
     include "conection.php";
     
     //print_r("INSERT INTO info(`name`,username,email,pass,gender,phone) VALUES(\"" . $name . "\",\"" . $username . "\",\"" . $email . "\",\"" . $pass . "\",\"" . $gender . "\",\"" . $phone . "\")");
-    $mysqli->query("INSERT INTO pooja_info(`name`,username,email,pass,gender,phone) VALUES(\"" . $name . "\",\"" . $username . "\",\"" . $email . "\",\"" . $pass . "\",\"" . $gender . "\",\"" . $phone . "\")");
+    $mysqli->query("INSERT INTO pooja_chat(sender,receiver,`message`) VALUES(\"" . $sender . "\",\"" . $receiver . "\",\"" . $message .  "\")");
     
    
-    header('location:login1.html');
+    header('location:chat.php');
    
     // $err_username = $err_pass = $err_full = "";
     // $validated = false;

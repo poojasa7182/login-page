@@ -3,40 +3,40 @@ body{
 }
 .chat-box{
     margin: 4.5%;
+    margin-top: 2%;
+    margin-bottom: 0%;
     width: 90%;
-    height: 1000px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     background-color: rgb(73, 72, 72);
-    border: 10px solid salmon;
+    border: 2px solid salmon;
     border-radius: 10px;
 }
 .chat-head{
     display: flex;
     flex-direction: row;
-    border-bottom: 10px solid salmon;
+    border-bottom: 2px solid salmon;
     height: 10%;
 }
 .profile-photo{   
-    margin: 0.1% 2%;
+    margin: 0.5% 2%;
     float: left;
-    border: 5px solid salmon;
-    background-image: url("photos/2.jpg");
+    border: 2px solid salmon;
     border-radius: 50%;
-    padding:30px;
-    width: 30px;
+    width: 50px;
 }
 .chat-name{
     align-self: center;
     text-align: center;
     align-items: center;
-    border: 5px solid salmon;
+    border: 2px solid salmon;
     border-radius: 20px;
     height: 70%;
     width:90%;
     background-color: rgb(46,45,45);
     color:mistyrose;
-    font-size: 50px;
+    font-size: 30px;
 }
 .user-list{
     align-self: center;
@@ -48,12 +48,11 @@ body{
 }
 .list{
     width:90%;
-    height: 73%;
-    background-image: url("photos/2.jpg");
-    font-size: 40px;
+    height: 80%;
+    font-size: 20px;
     color:rgb(26, 78, 77);
     border-radius: 10px;
-    border: 5px solid salmon;
+    border: 2px solid salmon;
 }
 .chat-display{
     display: flex;
@@ -61,20 +60,23 @@ body{
     height:80%
 }
 .list-user{
+    
     width: 20%;
     background-color: rgb(63, 65, 66);
-    border-left: 10px solid salmon;
+    border-left: 5px solid salmon;
 }
 .info{
     margin:5%;
-    font-size: 40px;
-    border-bottom: 5px solid rgb(236, 186, 186);
-    color: rgb(221, 211, 191);
+    font-size: 150%;
+    padding: 2%;
+    border-bottom: 2px solid rgb(236, 186, 186);
+    color: rgb(7, 7, 6);
     background-image: linear-gradient(rgb(196, 188, 188), rgb(80, 80, 74));
 }
 .user{
+    padding: 2%;
     margin: 5%;
-    font-size: 35px;
+    font-size: 100%;
     border-bottom: 2px solid rgb(236, 212, 238);
     color: rgb(252, 252, 252);
     background-image: linear-gradient(rgb(196, 188, 188), rgb(228, 116, 104));
@@ -88,12 +90,14 @@ body{
 }
 .message{
     width:55%;
-    padding: 10px;
-    margin:17px 2px;
+    padding: 5px;
+    margin-top:5px;
+    margin-left: 5px;
+    margin-right: 5px;
     border:2px solid black;
     border-radius: 20px;
-    height: 5%;
-    font-size: 200%;
+    height: fit-content;
+    font-size: 100%;
     color: rgb(252, 251, 248);
 }
 .left{
@@ -110,20 +114,27 @@ body{
 .list-user-cl{
     display: none;
 }
+
 .chat-body1{
     width:100%;
 }
 #send-container{   
-    height: 10%;
-    width: 100%;
-    border-top: 10px solid salmon;
-    align-items: center;
+   
+    border-top: 2px solid salmon;
+   
+}
+form{
+    
+    height: 100%;
 }
 #messageInp{
-    width: 90%;
-    height:72px;
-    margin: 0.5%;
-    font-size: 30px;
+    width: 80%;
+    height: 30px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
     background-color: rgb(82, 80, 80);
     border-radius: 50px;
     outline: none;
@@ -132,12 +143,14 @@ body{
 .btn{
     cursor: pointer;
     background-color:rgb(73, 72, 72);    
-    height: 72px;
-    width: 7%;
-    margin-bottom: 0%;
+    height: 40px;
+    width: 16%;
+    min-width:50px;
+    margin-bottom: 0.5%;
+    margin-top: 0.5%;
     color:seashell;
-    font-size: 35px;
-    border: 5px solid salmon;
+    font-size: 100%;
+    border: 2px solid salmon;
     border-radius: 20px;
 }
 
@@ -145,53 +158,3 @@ body{
 
 
 
-/*.logo{
-    display: block;
-    margin: auto;
-    width: 50px;
-    height: 50px;
-}
-
-.container{
-    width:90%;
-    background-color: burlywood;
-    margin: auto;
-    height:80vh;
-    padding: 30px;
-    overflow-y: auto;
-}
-.message{
-    background-color: grey;
-    width:24%;
-    padding: 10px;
-    margin:17px 2px;
-    border:2px solid black;
-    border-radius: 20px;
-}
-.left{
-    float: left;
-    clear: both;
-}
-.right{
-    float: right;
-    clear: both;
-}
-#send-container{
-    display: block;
-    margin: auto;
-    text-align: center;
-    width: 100%;
-    max-width: 100%;
-}
-#messageInp{
-    width: 80%;
-    border: 2px solid black;
-    border-radius: 10px;
-    height:34px;
-}
-.btn{
-    cursor: pointer;
-    border:2px solid black;
-    border-radius: 30px;
-    height: 34px;
-}*/

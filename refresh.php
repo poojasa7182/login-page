@@ -11,7 +11,7 @@
         
         
             while($row = $result->fetch_assoc()){
-                printf("{\"Username\":\" %s \",\"Name\":\" %s \",\"image\":\" %s \"},",
+                printf("{\"Username\":\"%s\",\"Name\":\"%s\",\"image\":\"%s\"},",
                 $row["username"],
                 $row["name"],
                 $row["image"],
