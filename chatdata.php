@@ -15,11 +15,12 @@
             
             
                 while($row = $result->fetch_assoc()){
-                    printf("{\"sender\":\" %s \",\"receiver\":\" %s \",\"message\":\" %s \"},",
-                    $row["sender"],
-                    $row["receiver"],
-                    $row["message"],
-                );
+                    $sender = $row["sender"];
+                    $receiver = $row["receiver"];
+                    $message = $row["message"];
+                    echo("{\"sender\":\" " . $sender . " \",\"receiver\":\" " . $receiver . " \",\"message\":\" " . $message . " \"},");
+                    
+               
                 }
                
             }

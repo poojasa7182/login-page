@@ -6,6 +6,9 @@ function nowOk(promptLocation){
     document.getElementById(promptLocation).innerHTML = "";
 }
 
+
+
+
 function validateUse(){
 
     var edu = document.getElementById("use").value;
@@ -19,7 +22,9 @@ function validateUse(){
     }
 }
 
+
 function checkData(){
+   
     console.log("hi");
     var uname = document.getElementById("use").value;
     var pass = document.getElementById("Password").value;
@@ -38,6 +43,7 @@ function checkData(){
                 if(this.responseText=="0"){
                     document.getElementById("checkUser").innerHTML="Invalid Username or Password!!";
                     document.getElementById("checkUser").style.color="red";
+                    alert("Invalid credentials");
                     return false;
                 }
                 if(this.responseText=="1"){
@@ -45,6 +51,7 @@ function checkData(){
                     console.log(bool);
                     document.getElementById("checkUser").innerHTML="OK";
                     document.getElementById("checkUser").style.color="green";
+                    document.getElementById("actual").click();
                     return true;
                 }
             }
@@ -55,16 +62,10 @@ function checkData(){
         xhr.onerror = function(){
             alert("error in xhr request");
         }
-        //console.log(bool);
-        if(document.getElementById("checkUser").innerHTML=="OK"){
-            console.log("hemlo");
-            return true;
-        }
-        else{
-            return false;
-        }
+       
     }
     else{
+        
         document.getElementById("checkUser").innerHTML="";
     }
 }
@@ -77,7 +78,7 @@ function validatePass1(){
     }
     else{
         nowOk("passPrompt");
-        checkData();
+        //checkData();
         return true;      
     }
     
@@ -85,13 +86,7 @@ function validatePass1(){
 
 function validate1(){
     if(validatePass1()&&validateUse()){
-            if(checkData()){
-                console.log("hemlo");
-                document.getElementById("actual").click();
-            }
-            else{
-                alert("Invalid Username or Password!!");
-            }
+        document.getElementById("actual1").click();
     }
     else{
         alert("All fields not filled");

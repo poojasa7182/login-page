@@ -3,7 +3,7 @@
     include "conection.php";
 
     $username = $_COOKIE['username'];
-
+    $extra = "";
     //echo("SELECT * FROM info WHERE username=\"" . $username . "\" AND pass=\"" . $password . "\";");
     $result = $mysqli->query("SELECT * FROM pooja_info WHERE username=\"" . $username .  "\";");
 
@@ -19,6 +19,10 @@
        $pass = $row["pass"];
        $image= $row["image"];
     }
+}
+if($about==""||$dob==""||$about==NULL||$dob==NULL){
+       $extra = "Please complete your profile before starting the chat!!";
+   
 }
     
 ?>
@@ -38,8 +42,9 @@
     <div class="login_tab">
         <div class="page2" style="width:90%">
             <button class="profileUpdate"><a href="profile.php" >Profile</a></button>
-            <button class="profileUpdate"><a href="page2.html" >Users</a></button>
+            <button class="profileUpdate"><a href="page2.php" >Users</a></button>
             <button type="button" class="profileUpdate"><a href="logout.php">Logout</a></button>
+            <?php echo($extra); ?>
             <form class="form" action="updateProf.php" method="POST">
                 <div class="login_tabs">
                     <div class="hide">
@@ -51,7 +56,7 @@
                     </div>
                     <div class="hide">
                         Username:<br>
-                        <input id="use" class="inputs" onkeyup="validateUse()" type="text" name="use" value="<?php
+                        <input id="use" class="inputs" onkeyup="validateUse1()" type="text" name="use" value="<?php
                         echo ($username);
                         ?>" >
                         <label id="usePrompt" class="labels"></label>
@@ -66,7 +71,7 @@
                     </div>
                     <div>
                         New Password:<br>
-                        <input id="Password" type="password" onkeyup="validatePass()" class="inputs" name="pass" >
+                        <input id="Password" type="password" onkeyup="validatePass1()" class="inputs" name="pass" >
                         <label id="passPrompt" class="labels"></label>
                     </div>
                     <div class="hide">
@@ -106,7 +111,7 @@
                         ?>">
                         <label id="abtPrompt"></label>
                     </div>
-                    
+                    <br>Add new password only when you want to change it, otherwise leave the field blank.
                     <div>
                         <!-- <button type="submit" >Submit</button> -->
                        <br>
@@ -130,7 +135,7 @@
                     <input type="submit" value="Upload Image" name="submit">
                     </form>
                     <div  >
-                    <img name="image" style="border:2px solid black width:200px ; height:200px" src="<?php
+                    <img name="image" style="border:2px solid black;  width:200px ; height:200px" src="<?php
                         echo ($image);
                         ?>">
                     </div>

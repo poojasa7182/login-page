@@ -6,6 +6,21 @@ function nowOk(promptLocation){
     document.getElementById(promptLocation).innerHTML = "";
 }
 
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
 
 function validateUse(){
     checkData();
@@ -21,6 +36,31 @@ function validateUse(){
         return true;      
     }
 }
+
+function validateUse1(){
+    var a = getCookie('username');
+    var edu = document.getElementById("use").value;
+    if(edu = a){
+        return true;
+    }
+    else{
+        checkData();
+        if(edu.length==0){
+       
+            producePrompt("Useranme is required!!" , "usePrompt" , "red");
+            return false;
+        }
+        else{
+          
+            nowOk("usePrompt");
+            return true;      
+        }
+    }
+   
+    
+    
+}
+
 //name
 function validateName(){
     var nameE = document.getElementById("name").value;
@@ -55,6 +95,21 @@ function validateEmail(){
         return true;
     }   
 
+}
+
+function validatePass1(){
+    var passE = document.getElementById("Password").value;
+    if(passE==""){
+        return true;
+    }
+    else{
+        if(validatePass()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
 //Password
 function validatePass(){
@@ -221,6 +276,7 @@ function checkData(){
 }
 
 
+
 //validate all
 function validate(){
     if(validateUse()&&validateGen()&&validatePhnNo()&&validateCoPass()&&validatePass()&&validateEmail()&&validateName()){
@@ -237,14 +293,22 @@ function validate(){
     }
 }
 function validate2(){
-    if(validatedob()&&validateAbt()&&validateUse()&&validateGen()&&validatePhnNo()&&validateCoPass()&&validatePass()&&validateEmail()&&validateName()){
-        console.log("haaaaaaaaaa")
-        if(checkData()){
+    if(validatedob()&&validateAbt()&&validateUse1()&&validateGen()&&validatePhnNo()&&validateCoPass()&&validatePass1()&&validateEmail()&&validateName()){
+        console.log("haaaaaaaaaa");
+        var a = getCookie('username');
+        var edu = document.getElementById("use").value;
+        if(edu = a){
             document.getElementById("actual").click();
         }
         else{
-            alert("Please, use a different username.")
+            if(checkData()){
+                document.getElementById("actual").click();
+            }
+            else{
+                alert("Please, use a different username.")
+            }
         }
+       
     }
     else{
         alert("All fields not filled");

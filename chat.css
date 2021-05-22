@@ -12,6 +12,7 @@ body{
     background-color: rgb(73, 72, 72);
     border: 2px solid salmon;
     border-radius: 10px;
+    
 }
 .chat-head{
     display: flex;
@@ -23,6 +24,8 @@ body{
     margin: 0.5% 2%;
     float: left;
     border: 2px solid salmon;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 50%;
     width: 50px;
 }

@@ -12,7 +12,9 @@ const scrollToBottom = (node) => {
 }
 
 scrollToBottom(theElement); 
-})
+});
+
+setInterval(chatIn,10000);
 
 function getCookie(cname) {
     var name = cname + "=";
@@ -56,6 +58,7 @@ function send(){
 }
 
 function chatIn(){
+    document.getElementById("chat_body").innerHTML="";
     var xhr = new XMLHttpRequest();
         xhr.onreadystatechange= function(){
             if(this.readyState==4 && this.status==200){

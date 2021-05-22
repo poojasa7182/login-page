@@ -28,6 +28,8 @@ a:visited{
     border: 10px solid salmon;
     border-radius: 20px;
     outline: 39px solid rgb(46, 48, 46);
+    overflow-y:auto;
+    overflow-x: hidden;
 }
 .image{
     width: 65%;

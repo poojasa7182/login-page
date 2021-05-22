@@ -11,18 +11,22 @@
     // }]}");
     echo("{\"data\":[");
     if($result->num_rows>0){
-        while($count>1){
+        // while($count>1){
         
         
             while($row = $result->fetch_assoc()){
-                printf("{\"Username\":\" %s \",\"Name\":\" %s \",\"image\":\" %s \"},",
-                $row["username"],
-                $row["name"],
-                $row["image"],
-            );
+                $username =  $row["username"];
+                $name = $row["name"];
+                $image = $row["image"];
+                echo("{\"Username\":\" " . $username . " \",\"Name\":\" " . $name . " \",\"image\":\" " . $image . " \"},");
+                // printf("{\"Username\":\" %s \",\"Name\":\" %s \",\"image\":\" %s \"},",
+                // $row["username"],
+                // $row["name"],
+                // $row["image"],
+            //);
             }
-            $count--;
-        }
+            //$count--;
+        //}
        
        
         

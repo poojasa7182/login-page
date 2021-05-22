@@ -4,7 +4,7 @@
 
     $username = $_REQUEST["use"];
     //print_r()
-    $result = $mysqli->query("SELECT username , `name`, `image` FROM pooja_info WHERE username REGEXP '" . $username . "' OR `name` REGEXP '" . $username . "';");
+    $result = $mysqli->query("SELECT DISTINCT username , `name`, `image` FROM pooja_info WHERE username REGEXP '" . $username . "' OR `name` REGEXP '" . $username . "';");
    
     
     
@@ -13,11 +13,15 @@
             
             
                 while($row = $result->fetch_assoc()){
-                    printf("{\"Username\":\" %s \",\"Name\":\" %s \",\"image\":\" %s \"},",
-                    $row["username"],
-                    $row["name"],
-                    $row["image"],
-                );
+                    $username =  $row["username"];
+                    $name = $row["name"];
+                    $image = $row["image"];
+                    echo("{\"Username\":\" " . $username . " \",\"Name\":\" " . $name . " \",\"image\":\" " . $image . " \"},");
+                //     printf("{\"Username\":\" %s \",\"Name\":\" %s \",\"image\":\" %s \"},",
+                //     $row["username"],
+                //     $row["name"],
+                //     $row["image"],
+                // );
                 }
                
             }

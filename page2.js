@@ -36,12 +36,12 @@ function find(){
                     let childDiv1 = document.createElement("div");
                     let childDiv2 = document.createElement("div");
                     var a = siteData_data[i].Username;
-                    childDiv1.innerHTML= "<button id="+a+"onclick = \"openChat("+a+")\">"+siteData_data[i].Username+"("+siteData_data[i].Name+")"+"</button>";
+                    childDiv1.innerHTML= "<button class=\"buttons\" id="+a+"onclick = \"openChat("+a+")\">"+siteData_data[i].Username+"("+siteData_data[i].Name+")"+"</button>";
                     childDiv1.className="content1";
                     childDiv2.className="content2";
                     mainDiv.className="content";
                     childDiv1.id=a;
-                    childDiv2.innerHTML= "<img class=\"icons\" style=\"max-width:100%; height:auto\"src=\""+siteData_data[i].image+"\">";
+                    childDiv2.innerHTML= "<img class=\"icon\" style=\"max-width:100%; height:auto\"src=\""+siteData_data[i].image+"\">";
                     mainDiv.appendChild(childDiv1);
                     mainDiv.appendChild(childDiv2);
                     document.getElementById("id2").appendChild(mainDiv);

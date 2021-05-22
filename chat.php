@@ -50,10 +50,20 @@
             text-decoration-color: rgb(235, 191, 187);
             color: rgb(235, 191, 187);
         }
+        .profile-photo{   
+            margin: 0.5% 2%;
+            float: left;
+            border: 2px solid salmon;
+            background-image: url("<?php echo($image) ?>");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            width: 50px;
+        }
     </style>
 </head>
 <body>
-<button class="button" type="button"><a href="page2.html">Back to User List</a></button>
+<button class="button" type="button"><a href="page2.php">Back to User List</a></button>
     <div class="chat-box">
         <div class="chat-head">
             <div class="profile-photo">
@@ -99,6 +109,7 @@
                 );
                     ?></div>
             </div>
+            <div style="align-self:flex-end; color : whitesmoke ; margin:5%" >Click on info to toggle this bar.</div>
         </div>
         </div>
         <div class="chat-send">
